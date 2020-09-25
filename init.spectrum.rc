@@ -23,6 +23,9 @@ write /sys/module/cpu_boost/parameters/input_boost_enabled 1
 write /sys/module/cpu_boost/parameters/input_boost_freq 0:1401000 1:1248000 2:1248000 3:0
 write /sys/module/cpu_boost/parameters/input_boost_ms 400
 write /sys/module/msm_thermal/parameters/enabled Y
+write /sys/kernel/gpu/gpu_max_clock 598
+write /sys/kernel/gpu/gpu_governor msm-adreno-tz
+write /sys/module/simple_gpu_algorithm/parameters/simple_gpu_activate 0
 
 # Performance (based on DrunkSauce Lite)
 on property:persist.spectrum.profile=1
