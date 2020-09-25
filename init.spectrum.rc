@@ -28,6 +28,8 @@ write /sys/kernel/gpu/gpu_governor msm-adreno-tz
 write /sys/module/simple_gpu_algorithm/parameters/simple_gpu_activate 0
 write /sys/kernel/mm/uksm/cpu_governor full medium low [quiet] 
 write /sys/kernel/mm/uksm/max_cpu_percentage 1
+write /sys/block/mmcblk0/queue/scheduler noop deadline cfq test-iosched [zen] row bfq
+write /sys/block/mmcblk0/queue/read_ahead_kb 2048
 
 # Performance (based on DrunkSauce Lite)
 on property:persist.spectrum.profile=1
