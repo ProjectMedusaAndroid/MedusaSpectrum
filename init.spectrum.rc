@@ -14,16 +14,16 @@ on property:sys.boot_completed=1
 
 # Balance (default profile)
 on property:persist.spectrum.profile=0
-    # Add configs here
+
 
 # Performance (based on DrunkSauce Lite)
 on property:persist.spectrum.profile=1
-    # Add configs here
+
 
 # Battery
 on property:persist.spectrum.profile=2
-    # Add configs here
+
 
 # Gaming
 on property:persist.spectrum.profile=3
-    # Add configs here
+
