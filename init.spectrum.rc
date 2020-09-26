@@ -7,9 +7,6 @@ on property:sys.boot_completed=1
    # Set default profile on first boot
    exec u:r:init:s0 root root -- /init.spectrum.sh
    exec u:r:su:s0 root root -- /init.spectrum.sh
-   # Execute ZRAM Starter
-   exec u:r:init:s0 root root -- /init.zram.sh
-   exec u:r:su:s0 root root -- /init.zram.sh
    # Enable Spectrum support
    setprop spectrum.support 1
    # Add kernel name
@@ -31,7 +28,7 @@ write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_f
 write /sys/kernel/gpu/gpu_min_freq "270"
 write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq "270000000"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "5"
-write /sys/kernel/gpu/gpu_governor "balanced"
+write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "balanced"
 write /sys/module/adreno_idler/parameters/adreno_idler_active "Y"
 write /sys/module/simple_gpu_algorithm/parameters/simple_gpu_activate "1"
 write /sys/module/simple_gpu_algorithm/parameters/simple_laziness "0"
@@ -56,7 +53,7 @@ write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_f
 write /sys/kernel/gpu/gpu_min_freq "400"
 write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq "400000000"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "2"
-write /sys/kernel/gpu/gpu_governor "msm-adreno-tz"
+write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
 write /sys/module/adreno_idler/parameters/adreno_idler_active "N"
 write /sys/module/simple_gpu_algorithm/parameters/simple_gpu_activate "1"
 write /sys/module/simple_gpu_algorithm/parameters/simple_laziness "0"
@@ -82,7 +79,7 @@ write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_f
 write /sys/kernel/gpu/gpu_min_freq "270"
 write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq "270000000"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "6"
-write /sys/kernel/gpu/gpu_governor "guardian"
+write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "guardian"
 write /sys/module/adreno_idler/parameters/adreno_idler_active "Y"
 write /sys/module/simple_gpu_algorithm/parameters/simple_gpu_activate "1"
 write /sys/module/simple_gpu_algorithm/parameters/simple_laziness "0"
@@ -108,7 +105,7 @@ write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_f
 write /sys/kernel/gpu/gpu_min_freq "484"
 write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq "484800000"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "0"
-write /sys/kernel/gpu/gpu_governor "msm-adreno-plus"
+write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-plus"
 write /sys/module/adreno_idler/parameters/adreno_idler_active "N"
 write /sys/module/simple_gpu_algorithm/parameters/simple_gpu_activate "1"
 write /sys/module/simple_gpu_algorithm/parameters/simple_laziness "0"
